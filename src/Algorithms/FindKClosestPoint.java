@@ -5,6 +5,9 @@ import java.util.PriorityQueue;
 
 import Algorithms.FindKClosestPoint.CPoint;
 
+
+//@Author :Arpit Parikh
+
 //Following Algorithm is for the find the Kth Closest Point 
 class PointComparator implements Comparator<CPoint>
 {
