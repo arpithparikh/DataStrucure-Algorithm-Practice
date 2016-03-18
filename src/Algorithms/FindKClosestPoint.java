@@ -6,6 +6,14 @@ import java.util.PriorityQueue;
 import Algorithms.FindKClosestPoint.CPoint;
 
 
+
+//Maintain a heap of size k.
+
+//For each point, calculate the distance to the point P. Insert that distance into the heap and delete the 
+//maximum from the heap if the size of the heap is greater than k.
+
+//Running time: O(n log k)
+
 //@Author :Arpit Parikh
 
 //Following Algorithm is for the find the Kth Closest Point 
