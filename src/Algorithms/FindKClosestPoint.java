@@ -55,6 +55,7 @@ public class FindKClosestPoint {
 		}
 
 	
+		//Main method 
 	public CPoint[] findKclosestPoints(CPoint[] array, CPoint original,int k)
 	{
 		
@@ -107,8 +108,6 @@ public class FindKClosestPoint {
 		return res;
 		
 	}
-	
-		
 	
 	
 }	
