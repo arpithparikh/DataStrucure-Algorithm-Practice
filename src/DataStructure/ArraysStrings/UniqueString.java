@@ -49,41 +49,31 @@ public class UniqueString {
 	
 	//TODO
 
-/*	//Time complexity O(nlogn),sort first and then compare adjacent element to check whether they are same or not!
+	//Time complexity O(nlogn),sort first and then compare adjacent element to check whether they are same or not!
 	public static boolean AdditionalSolution(String str)
 	{
 		
-				//Precondition if null, length <0 // Assuming the String Contains ASCII characters
-				if(str==null||str.length()<0||str.length()>128)
-				{
-					return false;
-				}
-				
-				//converting into character array
-				char[] res=str.toCharArray();
-				
-				//Sort using time sort, modified TimeSort in 1.7 ,O(n)< x < O(nlgn)
-				
+		//Precondition if null, length <0 // Assuming the String Contains ASCII characters
+		if(str == null || str.length()<0||str.length()>128)
+			return false;
 		
-				
-				for(int i=0;i<res.length;i++)
-				{
-					//Compare the adjacent Elements
-					if(i!=res.length-1){
-			            if(res[i]!=(res[i+1])){
-			                return true;
-			            }
-			        }else {
-			            return false;
-			        }
-				}
-				
-				return true;
-				
+		//converting into character array
+		char[] res = str.toCharArray();
+		
+		//Sort using time sort, modified TimeSort in 1.7 ,O(n)< x < O(nlgn)
+		Arrays.sort(res);
+		
+		for(int i =0;i<res.length-1;i++)	
+		{
+			//Compare the adjacent Elements
+			if(res[i] == res[i+1])
+				return false;
+		}
+		return true;
 				
 				
 		
-	}*/
+	}
 	
 	public static void main(String args[])
 	{
@@ -91,11 +81,13 @@ public class UniqueString {
 		
 		//Example
 		
-		
-		String s1="abc@d";
+		String s1="abca@d";
+		//String s2="decg";
 		
 		System.out.println("Answer:"+" "+Solution(s1));
-		/*System.out.println(AdditionalSolution(s1)+" "+AdditionalSolution(s2));*/
+		System.out.println(AdditionalSolution(s1));
+		
+		//will return false.
 		
 		
 		
