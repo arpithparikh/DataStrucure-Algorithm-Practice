@@ -33,20 +33,19 @@ public class Sherlock_Beast {
 		return ret.toString();
 	}
 	
-	
-	
 	public static void main(String args[])throws NumberFormatException,IOException{
-		
-		
-		//
+				
+		// choosing the 3,5 or more than that
 		int T=Integer.parseInt(in.readLine());
 		
-		for(int i=0;i<T;i++){
+		try
+		{
+		for(int i=0;i<=T;i++){
 		
 		// empty string
-		String s = "";
+			String s = "";
 			
-		//
+		//if you enter 
 		int N = Integer.parseInt(in.readLine());
 
 		for(int j=N;j>=0;j--)
@@ -63,13 +62,14 @@ public class Sherlock_Beast {
 			
 		else
 			System.out.println(s);
-			
-			in.close();
-			
-			
+					
 		}
 		
-		
+		}
+		catch(Exception e)
+		{
+			System.out.print(e);
+		}
 	}
 
 }
