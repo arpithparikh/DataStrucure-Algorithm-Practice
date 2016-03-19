@@ -63,9 +63,7 @@ public class Reverse {
 		*/
 			}
 		return str;
-	
-		
-		
+
 	}
 	
 	public static void main(String[] args) {	
