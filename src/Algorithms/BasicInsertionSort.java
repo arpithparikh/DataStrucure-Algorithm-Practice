@@ -8,8 +8,6 @@
 //Complexity O(n^2)
 //selection sort performs better than quick sort in case array to be
 //sorted is small in size due to less computations and assignments
-
-
 package Algorithms;
 
 import java.util.Arrays;
@@ -19,8 +17,7 @@ public class BasicInsertionSort {
 	public static int[] SortInsertion(int values[],int n)
 	{
 		
-	//find the length of the array
-		
+		//find the length of the array
 		 n=values.length;
 		
 		 for(int i=1;i<values.length;i++)
