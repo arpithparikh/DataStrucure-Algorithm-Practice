@@ -3,7 +3,6 @@
 //but may not copy to other data structure.
 //Stack supports push(),pop(),isEmpty(),peek()
 
-
 //source: https://github.com/JamesJi9277/Interview.
 package DataStructure.StackAndQueue;
 
@@ -25,23 +24,12 @@ public class SortStack {
 			//check the stack is empty or not and check the first element of the stack greater than temp variable.
 			//example [1,4,5,3]=> 4>1 after first iteration.
 			while(!res.isEmpty()&&res.peek()>tmp)
-			{
-				
-				stack.push(res.pop());
-				
+			{	
+				stack.push(res.pop());	
 			}
 			//when no element in the res stack.
 			res.push(tmp);
 		}
-		
-		
-		
 		return res;
 	}
-	
-	
-	
-	
-	
-	
 }
