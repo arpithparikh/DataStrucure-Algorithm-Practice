@@ -5,7 +5,6 @@
 //first iteration it will give 11,12,13,5,6
 //So basically it swap between the adjacent elements in the whole array.
 //start with key and check the adjacent elements and sort it through it.
-
 //Complexity O(n^2)
 //selection sort performs better than quick sort in case array to be
 //sorted is small in size due to less computations and assignments
@@ -28,6 +27,7 @@ public class BasicInsertionSort {
 		 {
 			 //define key
 			 int key=values[i];
+			 
 			 //to loop over
 			 int j=i-1;
 			 
@@ -45,16 +45,38 @@ public class BasicInsertionSort {
 		return values;
 	}
 	
-	
-	//to test 
-	
-	public static void main(String args[])
+	//Decreasing approach. 	
+	public static int[] decSortInsertion(int values[],int n)
 	{
 		
+		for(int i=1;i<values.length;i++)
+			for(int j=i;j>0;j--)
+				if(values[j-1]<values[j])
+					swap(values,j-1,j);
+		
+		
+		return values;
+		
+	}
+	
+	//to test 
+	private static void swap(int[] values, int i, int i2) {
+		// TODO Auto-generated method stub
+		int temp=values[i];
+		values[i]=values[i2];
+		values[i2]=temp;
+	}
+
+	public static void main(String args[])
+	{
 		int[] array={12,11,13,5,6};
 	
 		System.out.println(Arrays.toString(SortInsertion(array, array.length)));
 		
 		//Answer: [5, 6, 11, 12, 13]
+		
+		System.out.println(Arrays.toString(decSortInsertion(array, array.length)));
+		
+		//Answer: [13, 12, 11, 6, 5]
 	}
 }
