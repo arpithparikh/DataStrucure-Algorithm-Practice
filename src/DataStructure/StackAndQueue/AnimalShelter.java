@@ -2,9 +2,7 @@
 // basis. People must adopt either the "oldest" (based on arrival time) of all animals at the shelter, or they can select
 // whether they would prefer a dog or a cat(and will receive the oldest animal of that type). They cannot select which specific animal thet would
 // like. Create the data structures to maintain this system and implement operation such as an enqueue, dequeueAny, dequeueDog and dequeueCats. You
-// may use built-in LinkedList data structure
-
-//Reference :https://github.com/JamesJi9277/Interview/blob/master/CC150/CH3%20Stacks%26Queues/3.7.java
+// may use built-in LinkedList data structure.
 package DataStructure.StackAndQueue;
 
 import java.util.LinkedList;
