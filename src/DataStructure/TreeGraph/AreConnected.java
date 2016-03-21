@@ -11,7 +11,7 @@ import java.util.Set;
 
 //Node class with the set of neighbors// 
 class Node{
-	
+	//Consist the value
 	public int val;
 	public Set<Node> neighbors;
 	Node(int v)
