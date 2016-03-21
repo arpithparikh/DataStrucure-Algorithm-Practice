@@ -10,7 +10,7 @@ import java.util.List;
 
 public class UglyNumber {
 	
-	//if n=9 it will return 10 ugly number.
+/*	//if n=9 it will return 10 ugly number.
 	public static int Ugly(int n)
 	{
 		
@@ -37,13 +37,52 @@ public class UglyNumber {
 		
 		return list.get(n);
 	}
+	*/
+	//Beautiful solution
+	public static int getN(int n)
+	{
+		//define the array
+		int array[]=new int[n];
+		//initialize the array[0]=1 which is precondition factor of the all the number
+		array[0]=1;
+		
+		//Initialize the numbers
+		int i2=0,i3=0,i5=0;
+
+		//Loop over n
+		for(int i=1;i<n;i++)
+		{
+			//next2,next3,next5
+			int next2=array[i2]*2,next3=array[i3]*3,next5=array[i5]*5;
+			
+			//find the minimum of three
+			int min=Math.min(next2, Math.min(next3, next5));
+			
+			//initialize the minimum 
+			array[i]=min;
+			
+			//
+			if(min==next2)
+				i2++;
+			if(min==next3)
+				i3++;
+			if(min==next5)
+				i5++;
+			
+			
+		}
+		
+		return array[n-1];
+	}
 
 	
 	public static void main(String args[])
 	{
 		
 		int n=9;
-		System.out.println(+Ugly(n));
+	/*	System.out.println(+Ugly(n));
+*/		//
+		System.out.println(getN(n));
 	
 	}
 }
