@@ -45,6 +45,7 @@ public class AreConnected {
 			{
 				Node temp=queue.poll();
 				
+				//add visited nodes
 				visited.add(temp);
 				
 				//Temporary contains destination node then it will return true.
