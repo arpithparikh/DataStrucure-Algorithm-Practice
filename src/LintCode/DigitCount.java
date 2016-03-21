@@ -26,7 +26,6 @@ public class DigitCount {
     		
     	}
     	
-    	
 		return counter+1;
         // write your code here
     }
