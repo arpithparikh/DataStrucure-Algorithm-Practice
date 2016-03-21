@@ -41,6 +41,31 @@ public class TrailZero {
 		}
 		return counter;
 	}
+	
+	//
+	public static long Solution2(long n)
+	{
+		//initialize num5 and num2
+		long num5=0;
+		long num2=0;
+		//if the both n1 and n2=n
+		long n1=n;
+		long n2=n;
+		
+		//n1>0
+		while(n1>0)
+			num5+=n1/5;
+			n1/=5;
+			
+		while(n2>0)
+			num2+=n2/5;
+			n2/=5;
+			
+			return Math.min(num2, num5);
+	}
+	
+	
+	
 	public static void main(String args[])
 	{
 		//find the factorial of 11.
