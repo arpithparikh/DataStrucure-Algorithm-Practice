@@ -4,10 +4,6 @@
 
 package LintCode;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class UglyNumber {
 	
 /*	//if n=9 it will return 10 ugly number.
