@@ -1,0 +1,78 @@
+*********************************************************************Java Basic**********************************************
+1.Static keyword
+->No need to create the object.Directly accessible in main class without need of object creation.
+2.AutoBoxing
+->Automatic transformation of primitive data type into object equivalents or wrapper type.
+3.UnBoxing 
+->Transformation of wrapper into their primitive equivalent 
+4.StringBuffer / String
+->String ->immutable ->String object can not be changed .When you try to append something, you may get the performance issues.
+5.String Builder/String Buffer
+->Mutable ->append would be more efficient.
+6.Over-riding 
+->Inherit the other class.
+->public class Car {
+public static void main (String [] args) {
+Car a = new Car();
+Car b = new Ferrari(); //Car ref, but a Ferrari object
+a.start(); // Runs the Car version of start()
+b.start(); // Runs the Ferrari version of start()
+}
+}
+class Car {
+public void start() {
+System.out.println("This is a Generic start to any Car");
+}
+}
+class Ferrari extends Car {
+public void start() {
+System.out.println("Lets start the Ferrari and go out for a cool Party.");
+}
+}
+7.Over loading(Polymorphism)
+->Multiple method with the same name
+->varying the number of arguments
+->Varying the data types.
+8.Constructor
+->It can be public,private,protected
+-to create the instance of the class
+->default constructor.
+->they must have same name as the class itself.
+->they do not return a value and not have to specify the keyword void.
+9.Java Exception handling
+->Errors: 
+->Unchecked Exception 
+->Checked Exception
+10.Throws
+->handle the list of the exceptions which might have been thrown
+11.throw
+->if the user wants to throw the exception
+12.Byte Stream
+->for reading the binary data
+13.character stream
+->work with characters rather than byte
+->Java allows the Unicode convention.
+14.FileInputStrem
+->It contains input bytes from the file and implements an input stream.
+15.FileOutputStream
+->it contains writing data to a file and also implements an output stream.
+16.Array List
+->Random ACCESS
+17.Linked List
+->Sequential ACCESS
+18.Iterator
+->Same as enumerator except the remove() method.
+->Iterator<String> itr=linkedList.iterator();
+->while(itr.hasNext())
+{
+	if(itr.next().equals("helllo"))
+	itr.remove();
+}
+19.Enumeration
+->same as the iterator but not having the remove(_) method
+->Enumeration enumlist=Collection.enumeration(linklist);
+******
+//TODO
+
+
+ 
