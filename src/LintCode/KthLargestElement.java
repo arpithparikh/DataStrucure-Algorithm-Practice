@@ -29,7 +29,15 @@ public class KthLargestElement {
 	//There are several version of choosing the pivot element 
 	//1.first pivot,2.last pivot,3.pick random pivot,4.pick median as pivot
 	
+	//Quick Sort:   
+	//Each iteration, find a pivot, and then from the low, and both high and pivot for comparison.    
+	//Find a Low > Pivot, High < Pivot, you can swap up.    
+	//The resulting low moment partion point is the
 	
+	
+	
+	///Same as median problem but the one is not looking for the middle point , but for the kth element.
+	//Using the same quick sort with minor modification and we can solve this problem.
 	public int findKthLargest(int[] nums,int k)
 	{
 		//precondition
@@ -41,6 +49,9 @@ public class KthLargestElement {
 			return getkthElement(nums.length-k+1,nums,0,nums.length-1);
 	}
 
+	//here instead of using the array , we can use the arrayList for the more efficiency.
+	
+	
 	private int getkthElement(int k, int[] nums, int start, int end) {
 		// TODO Auto-generated method stub
 		
