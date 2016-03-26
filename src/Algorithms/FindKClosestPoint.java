@@ -27,7 +27,7 @@ class PointComparator implements Comparator<CPoint>
 		origin=originPoint;
 	}
 
-	@Override
+	
 	//This method will compare the distance between two point
 	public int compare(CPoint o1, CPoint o2) {
 		// TODO Auto-generated method stub
@@ -119,8 +119,7 @@ public class FindKClosestPoint {
 		return res;
 		
 	}
-	
-	
+
 }	
 
 }
