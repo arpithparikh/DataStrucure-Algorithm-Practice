@@ -14,6 +14,7 @@ class Node{
 	//Consist the value
 	public int val;
 	public Set<Node> neighbors;
+	public boolean visited;
 	Node(int v)
 	{
 		val=v;
