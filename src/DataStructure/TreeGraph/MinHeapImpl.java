@@ -39,7 +39,7 @@ public class MinHeapImpl {
 				insert(arrayA[i]);
 	}
 
-	//Insert the element
+	//Insert the element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 	private void insert(int x) {
 		// TODO Auto-generated method stub
 		
