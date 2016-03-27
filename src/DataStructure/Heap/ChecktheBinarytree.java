@@ -73,7 +73,7 @@ public class ChecktheBinarytree {
          
         //Output the binary Tree is Complete.
         
-        
+        //count the number of nodes
         int node_count = tree.countNodes(root);
         int index = 0;
          
