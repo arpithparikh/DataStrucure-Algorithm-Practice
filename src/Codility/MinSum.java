@@ -2,6 +2,9 @@ package Codility;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class MinSum {
 	
@@ -27,9 +30,11 @@ public class MinSum {
 	}
 */
 	
-public static ArrayList<ArrayList<Integer>> minSum(int A[])
-{
+public static ArrayList<ArrayList<Integer>> minSum(int A[]){
+	
+	//Result Array
 	ArrayList<ArrayList<Integer>> res=new ArrayList<ArrayList<Integer>>();
+	
 	
 	if(A.length==0 || A == null)
 	{
@@ -39,7 +44,8 @@ public static ArrayList<ArrayList<Integer>> minSum(int A[])
 	ArrayList<Integer> list=new ArrayList<Integer>();
     Arrays.sort(A);  
 	helper(res,list,A,0);
-//	System.out.println("The Minimum sum is "+ sum(res.get(0)));
+
+	System.out.println("The Minimum sum is "+ sum(res.get(0)));
 	return res;
 	
 }
@@ -48,13 +54,14 @@ public static ArrayList<ArrayList<Integer>> minSum(int A[])
 	private static void helper(ArrayList<ArrayList<Integer>> res, ArrayList<Integer> list, int[] A, int pos) {
 	// TODO Auto-generated method stub
 		
-		int min = A[0];
+		int min = -10000;
 		
-		if(sum(list) < min && res==null)
+		if(sum(list) < min  || sum(list) > 0)
 		{
 			min = sum(list);
+				
 			res.remove(list);
-			res.add(new ArrayList<Integer>(list));		
+			res.add(new ArrayList<Integer>(list));	
 		}
 		
 		for(int i=pos;i<A.length;i++)
@@ -65,7 +72,6 @@ public static ArrayList<ArrayList<Integer>> minSum(int A[])
 		}
 	
 }
-
 
 	private static int sum(ArrayList<Integer> list) {
 		// TODO Auto-generated method stub
