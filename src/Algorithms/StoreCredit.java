@@ -1,7 +1,6 @@
 package Algorithms;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -16,24 +15,34 @@ import java.util.Set;
 
 public class StoreCredit {
 
-	
 	public static void main(String args[]) throws NumberFormatException, IOException
 	{
 		
 		//FileReader fileReader=new FileReader("C:\\Users\\arpitparikh\\Desktop\\A-small-practice .in");
 		   
-		   List<Integer> numbers = new ArrayList<>();
-		   for (String line1 : Files.readAllLines(Paths.get("C:\\Users\\arpitparikh\\Desktop\\A-small-practice .in"))) {
-		       for (String part : line1.split("\\s+")) {
+		   List<String> numbers = new ArrayList<String>();
+		/*   for (String line1 : Files.readAllLines(Paths.get("C:\\Users\\arpitparikh\\Desktop\\A-small-practice .in"))) {
+		       for (String part : line1.split("\\s")) {
 		           Integer i = Integer.valueOf(part);
+		           
 		           numbers.add(i);
 		       }
 		   }
 		   //Number of Test Cases
 		   int N=numbers.get(0);
-		   System.out.println(numbers.get(0));
+		   System.out.println(numbers.get(0));*/
 		   
 		   
+		   
+		   try(BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\arpitparikh\\Desktop\\A-small-practice .in"))) {
+			    for(String line; (line = br.readLine()) != null; ) {
+			    	
+			    	//System.out.println(line);
+			    	numbers.add(line);
+			        // process the line.
+			    }
+			    // line is not visible here.
+			}
 		   
 		   
 		  /* for (Integer integer : numbers) {
@@ -42,27 +51,30 @@ public class StoreCredit {
 		}*/
 		   		
 		   
-		   int num=0;
+		  /* int N=Integer.parseInt(numbers.get(0));
+		   System.out.println(numbers.get(0));
+		   System.out.println(numbers.get(3));
+		   */
+		  
 		   
-		for(int j=0;j<N;j++)
+		for(int j=0;j<10;j++)
 		{
 				
-				int target=numbers.get(j*3+1+num);
-				 num=numbers.get(j*3+2+num-1);
-				 
-				
-				System.out.println(num);
-				  int[] targetInp=new int[num]; 
-				
-				for(int i=1;i<num;i++)
+				int target=Integer.parseInt(numbers.get(j*3+1));
+				int num=Integer.parseInt(numbers.get(j*3+2));
+				String array=numbers.get(j*3+3);
+				int A[]=new int[num];
+				for(int i=0;i<array.length()-1;i++)
 				{
-					targetInp[i]=numbers.get(j*3+2+i);
+					A[i]=array.charAt(i);
+					
 				}
+			 
 				
-			//System.out.println(Arrays.toString(targetInp));
+					 System.out.println("numbers"+Arrays.toString(A));
 			
 		}
-		   
+	   
 		   int[] targetInput = {2, 1, 9, 4 ,4 ,56, 90, 3};
 	        int target = 8;
 	     //  System.out.println(match(targetInput, target));
