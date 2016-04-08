@@ -3,13 +3,13 @@
 
 package Cracking_Code_Book.ch2;
 
-class Node
+class LinkedNode
 {
 	//
-	Node next=null;
+	LinkedNode next=null;
 	int data;
 	
-	public Node(int d)
+	public LinkedNode(int d)
 	{
 		data=d;
 	}
@@ -17,8 +17,8 @@ class Node
 	
 	void appendToTail(int d)
 	{
-		Node end=new Node(d);
-		Node n=this;
+		LinkedNode end=new LinkedNode(d);
+		LinkedNode n=this;
 		while(n.next!=null)
 		{
 			n=n.next;
@@ -26,10 +26,10 @@ class Node
 		n.next=end;
 	}
 
-	Node DeleteNode(Node node,int d)
+	LinkedNode DeleteNode(LinkedNode node,int d)
 	{
 		
-		Node n=next;//head start
+		LinkedNode n=next;//head start
 		
 		if(n.data==d)
 		{
