@@ -7,7 +7,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class MinSum {
-	
 /*	public static int maxSubArray(int[] A) {
 		int max = A[0];
 		int[] sum = new int[A.length];
@@ -29,7 +28,6 @@ public class MinSum {
 		return max;
 	}
 */
-	
 public static ArrayList<ArrayList<Integer>> minSum(int A[]){
 	
 	//Result Array
@@ -44,16 +42,14 @@ public static ArrayList<ArrayList<Integer>> minSum(int A[]){
 	ArrayList<Integer> list=new ArrayList<Integer>();
     Arrays.sort(A);  
 	helper(res,list,A,0);
-
 	System.out.println("The Minimum sum is "+ sum(res.get(0)));
 	return res;
-	
 }
 		
 
 	private static void helper(ArrayList<ArrayList<Integer>> res, ArrayList<Integer> list, int[] A, int pos) {
 	// TODO Auto-generated method stub
-		
+		//Min value initialization
 		int min = -10000;
 		
 		if(sum(list) < min  || sum(list) > 0)

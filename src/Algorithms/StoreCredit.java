@@ -12,14 +12,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
 public class StoreCredit {
-
+	
 	public static void main(String args[]) throws NumberFormatException, IOException
-	{
-		
-		//FileReader fileReader=new FileReader("C:\\Users\\arpitparikh\\Desktop\\A-small-practice .in");
-		   
+	{	
+		//FileReader fileReader=new FileReader("C:\\Users\\arpitparikh\\Desktop\\A-small-practice .in");	   
 		   List<String> numbers = new ArrayList<String>();
 		/*   for (String line1 : Files.readAllLines(Paths.get("C:\\Users\\arpitparikh\\Desktop\\A-small-practice .in"))) {
 		       for (String part : line1.split("\\s")) {
@@ -31,9 +28,6 @@ public class StoreCredit {
 		   //Number of Test Cases
 		   int N=numbers.get(0);
 		   System.out.println(numbers.get(0));*/
-		   
-		   
-		   
 		   try(BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\arpitparikh\\Desktop\\A-small-practice .in"))) {
 			    for(String line; (line = br.readLine()) != null; ) {
 			    	
@@ -50,94 +44,56 @@ public class StoreCredit {
 			   System.out.print(numbers);
 		}*/
 		   		
-		   
 		  /* int N=Integer.parseInt(numbers.get(0));
 		   System.out.println(numbers.get(0));
 		   System.out.println(numbers.get(3));
-		   */
-		  
-		   
-		for(int j=0;j<10;j++)
-		{
-				
+		   */  
+		for(int j=0;j<10;j++){
 				int target=Integer.parseInt(numbers.get(j*3+1));
 				int num=Integer.parseInt(numbers.get(j*3+2));
 				String array=numbers.get(j*3+3);
 				int A[]=new int[num];
-				for(int i=0;i<array.length()-1;i++)
-				{
+				for(int i=0;i<array.length()-1;i++){
 					A[i]=array.charAt(i);
-					
-				}
-			 
-				
+				}			
 					 System.out.println("numbers"+Arrays.toString(A));
-			
 		}
-	   
-		   int[] targetInput = {2, 1, 9, 4 ,4 ,56, 90, 3};
-	        int target = 8;
-	     //  System.out.println(match(targetInput, target));
+		   		int[] targetInput = {2, 1, 9, 4 ,4 ,56, 90, 3};
+		   		int target = 8;
+		   		//  System.out.println(match(targetInput, target));
 		   
 		   
 	}
-	
-	
-
 public static Set<Integer> match(int A[],int total){
 	
 	int result[]=null;
-	
 	//Result Array
 	ArrayList<ArrayList<Integer>> res=new ArrayList<ArrayList<Integer>>();
-	
-	
 	Set<Integer> integers=new HashSet<Integer>();
-	if(A.length==0 || A == null)
-	{
+	if(A.length==0 || A == null){
 		return integers;
 	}
-	
 	ArrayList<Integer> list=new ArrayList<Integer>();
     Arrays.sort(A);  
 	helper(res,list,A,0,total);
-
 	
-	for (List integer : res) {
-		
-		if (integer.size()==2) {
-			
-			for (Object object : integer) {
-				
-				for(int i=0;i<A.length;i++)
-				{
-					if(A[i]==Integer.parseInt(object.toString()))
-					{
+	for (List integer : res){
+		if (integer.size()==2){
+			for (Object object : integer){
+				for(int i=0;i<A.length;i++){
+					if(A[i]==Integer.parseInt(object.toString())){
 						integers.add(i);
-					}
-					
+					}	
 				}
-				
 			}
-			
-			
 		}
-		
-		
 	}
-	
-	
 	return integers;
-
-	
-	
 }
 		
 
 	private static void helper(ArrayList<ArrayList<Integer>> res, ArrayList<Integer> list, int[] A, int pos,int total) {
-	// TODO Auto-generated method stub
-		
-		
+	// TODO Auto-generated method stub	
 		if(sum(list) ==total)
 		{
 		
@@ -150,10 +106,7 @@ public static Set<Integer> match(int A[],int total){
 			helper(res, list, A, i+1,total);
 			list.remove(list.size()-1);
 		}
-	
-}
-
-	
+	}
 	private static int sum(ArrayList<Integer> list) {
 		// TODO Auto-generated method stub
 		
@@ -165,16 +118,8 @@ public static Set<Integer> match(int A[],int total){
 		
 		return sum;
 	}
-	
-	
-	
-	
-	
-	
 	public static int[] matchTotal(int[] input,int target)
 	{
-		
-	
 		 Map<Integer, Integer> targetMap = new HashMap<Integer, Integer>();
 	        for(int i=0; i<input.length; i++){
 	            targetMap.put(i,input[i]);
@@ -182,10 +127,6 @@ public static Set<Integer> match(int A[],int total){
 	                System.out.println("Test case: "+(target - input[i])+" , "+input[i]);
 	            }
 	        }
-		
-		
-		
-		
 		return null;
 		
 	}
