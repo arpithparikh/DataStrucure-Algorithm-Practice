@@ -24,7 +24,7 @@ public class ReverseSentance {
 				findWhiteSpace++;
 			}
 			int counter=0;
-			for(String retval:string.split(" ",findWhiteSpace+1)){
+			for(String retval : string.split(" ",findWhiteSpace+1)){
 				map.put(counter, retval);
 				counter++;
 			}		
@@ -37,7 +37,7 @@ public class ReverseSentance {
 		Integer i;
 		while(iterator.hasNext()){
 			i=iterator.next();
-			builder.append(" "+map.get(i));
+			builder.append(" " + map.get(i));
 		}
 		return builder.toString();
 	}
@@ -49,14 +49,14 @@ public class ReverseSentance {
 	BufferedWriter bw = new BufferedWriter(fw);
 	  try(BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\arpitparikh\\git\\Interview_Cracking_Journey1\\src\\Algorithms\\B-large-practice (3).in"))) {
 		  int counter=1;  
-		  for(String line; (line = br.readLine()) != null; ) {
+		  for(String line; ( line = br.readLine()) != null; ) {
 		    	
 		    	//System.out.println(line);
 		    	
 		    	if(!line.matches("[a-zA-Z ]*\\d+.*"))
 		    	{
 		    		bw.write("Case #"+counter+":"+reverseString(line));
-		    		System.out.println("Case #"+counter+":"+reverseString(line));
+		    		System.out.println("Case #" + counter + ":" + reverseString(line));
 		    		counter++;
 		    	}
 		    	//line Separator
