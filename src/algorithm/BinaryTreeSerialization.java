@@ -14,7 +14,9 @@ class Solution{
 	StringBuilder sb = new StringBuiler();
 
 	Queue<TreeNode> queue = new LinkedList<TreeNode>();
+
 	queue.offer(root);
+
 	sb.append("{");
 
 	while(!queue.isEmpty()){
@@ -33,7 +35,7 @@ class Solution{
 			sb.append(crt.right);
 		}
 	}
-
+																				
 		sb.deleteCharAt(sb.lenght()-1);
 		sb.append("}");
 		return sb.toString();
