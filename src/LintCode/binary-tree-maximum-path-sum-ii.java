@@ -1,4 +1,8 @@
-tion of TreeNode:
+package LintCode;
+
+import javax.swing.tree.TreeNode;
+
+/*Solution of TreeNode:
  * public class TreeNode {
  *     public int val;
  *     public TreeNode left, right;

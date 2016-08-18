@@ -79,9 +79,6 @@ public class SortAlgorithms {
 		return numbers;
 		
 	} 
-	
-	
-	
 	private void swap(int[] numbers, int j, int i) {
 		// TODO Auto-generated method stub
 		
@@ -113,15 +110,35 @@ public class SortAlgorithms {
 	} 
 	
 	//Selection Sort
+	//last element is already sorted
+	//o(n^2)
 	public int[] SelectionSort(int numbers[]){
 		
 		
+		for(int i = 0 ;i<numbers.length-1 ;i++){
+			
+			int min = i;
+			
+			for(int j = i + 1 ; j<numbers.length ;j++){
+				
+				if(numbers[j] < numbers[min]){
+					min = j;//current element would be new minimum
+				}
+			}
+			if(min!=i){
+				swap(numbers,min,i);
+			}
+		}
 		
 		
 		return numbers;
 	} 
 	//Heap Sort
 	public int[] HeapSort(int numbers[]){
+		
+		
+		
+		
 		return numbers;
 		
 	} 

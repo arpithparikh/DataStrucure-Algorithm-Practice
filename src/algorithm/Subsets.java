@@ -1,22 +1,20 @@
-//SubSets => Return all possible subsets 
+//Subset of the String 
+public class Solution{
+	public ArrayList<ArrayList<Integer>> subsets(int[] nums){
+		ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>(); //ArrayList
+		ArrayList<Integer> list = new ArrayList<Integer>(); //List 
+		ArrayList.sort(nums);// Sort the number or characters
+		helper(res,list,nums,0); // helper to make the subsets
+		return res;
+	}
+	public void helper(ArrayList<ArrayList<Intger>> res,ArrayList<Intger> list, int[] nums,int start){
 
+		res.add(new ArrayList<Intger> (list));
+		for(int i =start ; i < nums.length ; i++){
 
-
-public class Subsets{
-		public ArrayList<ArrayList<Integer>> subsets(int[] nums){
-			//res and list 
-			ArrayList<ArrayList<Interger>> res = new ArrayList<ArrayList<Integer>>();
-			ArrayList<Integer> list = new ArrayList<Integer>();
-			Arrays.sort(nums);
-			helper(res,list,nums, 0);
-			return res;
+			list.add(nums[i]);
+			helper(res,list,nums,i+1);
+			list.remove(list.size() - 1);
 		}
-		public void helper(ArrayList<ArrayList<Integer> res, ArrayList<Integer> list, int[] nums, int start){
-				res.add(new ArrayList<Integer>(list));
-				for(int i = start ; i < nums.length ; i++){
-					list.add(nums[i]);
-					helepr(res,list,nums, i+1);
-					list.remove(list.size() -1);
-				}
-		}
+	}
 }

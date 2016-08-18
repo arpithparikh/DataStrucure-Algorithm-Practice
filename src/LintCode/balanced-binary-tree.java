@@ -1,4 +1,6 @@
-tion of TreeNode:
+package LintCode;
+
+/*SOtion of TreeNode:
  * public class TreeNode {
  *     public int val;
  *     public TreeNode left, right;
@@ -37,7 +39,7 @@ public class Solution {
         if(Math.abs(left.depth - right.depth) > 1){
             return new ReturnType(false,0);
         }
-        //最后需要加一别忘了
+        //æœ€å�Žéœ€è¦�åŠ ä¸€åˆ«å¿˜äº†
         return new ReturnType(true, Math.max(left.depth, right.depth)+1);
     }
 }

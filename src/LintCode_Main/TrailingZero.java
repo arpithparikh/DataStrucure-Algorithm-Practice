@@ -10,9 +10,7 @@ public class TrailingZero {
 	            n /= 5;
 	        }
 	        return sum;
-	    }
-	 
-	 
+	    }	
 	 public static void main(String []  args){
 		 long number = 6;
 		 System.out.println(trailingZeros(number));

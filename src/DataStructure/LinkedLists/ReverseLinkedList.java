@@ -1,6 +1,5 @@
 package DataStructure.LinkedLists;
 class ListNode {
-
 	int val;
 	ListNode next;
 	ListNode(int x){
@@ -31,13 +30,13 @@ public class ReverseLinkedList {
 			if(postnNode==null){
 				return null;
 			}
-			ListNode temp = postnNode.next;
-			postnNode.next = nNode;
-			nNode = postnNode;
-			postnNode = temp;
+			ListNode temp = postnNode.next;//Temp Node
+			postnNode.next = nNode;//PostNode
+			nNode = postnNode;//
+			postnNode = temp;//
 		}
-		mNode.next = postnNode;
-		premNode.next = nNode;
-		return fake.next;	
+		mNode.next = postnNode;//
+		premNode.next = nNode;//
+		return fake.next;	//
 	}
 }

@@ -1,0 +1,27 @@
+//Solution for Longest Increasing Continuous Subsequence:
+public class Solution{
+	public int longestIncreasingContinuousSubsequence(int[] A){
+		if(A == null || A.length  == 0){
+			return 0;
+		}
+		int leftRun = 1; //leftRun
+		int rightRun = 1; //RightRun
+		int ans = 1; //Answer
+		for(int i = 1 ; i < A.length ; i++){
+			if(A[i] > A[i - 1]){
+				leftRun++;
+			}else{
+				leftRun = 1;
+			}
+		}
+		for(int i = A.length - 2 ; i > = 0; i--){
+			if(A[i] > A[i+1]){
+				rightRun++;
+			}else{
+				rightRun = 1;
+			}
+			ans = Math.max(ans,rightRun);
+		}
+		return ans;
+	}
+}

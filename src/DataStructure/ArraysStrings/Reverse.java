@@ -20,7 +20,7 @@ public class Reverse {
 			return res.toString();
 		}
 		
-		
+		//abc -cba
 		for(int i=0;i<str.length();i++)
 		{
 			
