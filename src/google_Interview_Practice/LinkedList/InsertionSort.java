@@ -1,0 +1,19 @@
+//Insertion Sort List
+public class Solution{
+	//@param head : the first node of the Linked List
+	//@return : the head of the Linked ListNode
+	public ListNode insertionSortList(ListNode head){
+		ListNode dummy = new ListNode(0);
+		while(head!=null){
+			ListNode node = dummy;
+			while(node.next!=null && node.next.val < head.val){
+				node = node.next;
+			}
+			ListNode temp = head.next;
+			head.next = node.next;
+			node.next = head;
+			head = temp;
+		}
+		return dummy.next;
+	}
+}

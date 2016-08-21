@@ -1,7 +1,5 @@
 //Implement Stack by two Queues!
-
 import java.util.* ;
-
 class Stack{
 	Queue<Integer> q1 = new LinkedList<Integer>();
 	Queue<Integer> q2 = new LinkedList<Integer>();
@@ -33,5 +31,4 @@ class Stack{
 	public boolean isEmpty(){
 		return q1.size() == 0;
 	}
-
 }
