@@ -1,11 +1,10 @@
 //LevelOrderTraversal
 //[[3],[9,20],[15,7]]===>whole list inside the list
 public class Solution{ //this is just Solution
-	public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root){ //level-order Traversal
-	//ArrayList
+	public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root){ //level-order traversal
+	//ArrayList LevelOrder Traversal
 	ArrayList<ArrayList<Integer>> al = new ArrayList<ArrayList<Integer>>(); //AL
 	ArrayList<Integer> nodeValues = new ArrayList<Integer>(); //for the node_values
-
 		if(root ==  null){ // check if the root is null or not!
 			return al; //arrayList
 		}
@@ -30,6 +29,5 @@ public class Solution{ //this is just Solution
 		}
 	}
 	return al;
-
 	}
 }

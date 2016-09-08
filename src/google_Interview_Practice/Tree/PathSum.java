@@ -8,9 +8,9 @@ public class PathSum{
 		}
 		LinkedList<TreeNode> nodes = new LinkedList<TreeNode>(); //Nodes
 		LinkedList<Integer> values = new LinkedList<Integer>(); //Values
-		nodes.add(root);
-		values.add(root.val);
-		while(!nodes.isEmpty()){
+		nodes.add(root); //adding the root first
+		values.add(root.val); // adding the value first
+		while(!nodes.isEmpty()){ // check the is
 			TreeNode curr = nodes.poll(); //current 
 			int sumValue = values.poll(); //sumValue
 			if(curr.left == null && curr.right == null && sumValue == sum){ //curr.left== null 
