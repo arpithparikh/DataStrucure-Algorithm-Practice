@@ -32,6 +32,7 @@ public class PostOrder {
 					stack.pop();
 					list.add(curr.val);
 				}
+				
 			}else if(curr.left == prev){ //check the curr.left == prev
 				if(curr.right!=null){
 					stack.push(curr.right);
