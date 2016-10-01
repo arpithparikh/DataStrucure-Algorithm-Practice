@@ -3,6 +3,7 @@
 //cde
 //abc
 //Making the Anagram
+//#Test case : s1 : "abc" ,s2 : "acd"
 public class MakingAnagram{
 
 		public static int NUMBER_LETTERS = 26;
