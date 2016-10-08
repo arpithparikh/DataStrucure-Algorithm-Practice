@@ -28,16 +28,29 @@ public class Solution{
 			add(s , 0);
 
 		}
-
+		//Adding Node in Trie
 		private void add(String s,int index) { 
-
-
-
+			if (index == s.length()) {
+				return;
+			}
+			char current = s.charAt(index); //current
+			int charCode = getCharIndex(current);//charCode
+			Node child - getNode(current); //getNode -> Child Node
+			if(child == NULL){ //child  == null
+				child = new Node(); // child Node
+				setNode(current,child); // setting Node
+			}
+				child.add(s,index + 1); // adding 
 		}
 
+		//finding 
 		private int findCount(String s,int index) {
-
-
+			if(index ==  s.length())
+				return size;
+			Node child = getNode(s.charAt(index));
+			if(child == null)
+				return 0;
+			return child.findCount(s, index + 1);
 		 }
 	}
 }
