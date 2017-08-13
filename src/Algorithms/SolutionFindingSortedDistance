@@ -82,26 +82,10 @@ public class Solution
             truckCapacity -- ;
         }
 
-
-    return resultSet;
-
-
-
-    }
-
-
-    List<List<Integer>> sort(List<List<Integer>> allLocations){
-
-        //  allLocations.
+    return resultSet;    }
 
 
 
-
-
-        return allLocations;
-
-
-    }
 
 
 
